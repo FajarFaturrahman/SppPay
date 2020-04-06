@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".admin.HomeAdminFragment">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_90sdp"
+        android:background="@drawable/actionbar_background"/>
+
+    <TextView
+        android:id="@+id/username_admin"
+        style="@style/TextNamaUser"
+        android:text="Ujang Hayu"
+        />
+
+    <TextView
+        android:text="Admin"
+        android:layout_below="@id/username_admin"
+        style="@style/TextRole"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btn_data_siswa"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_160sdp"
+        android:layout_below="@id/view"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardElevation="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_25sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_35sdp"
+                android:src="@drawable/ic_siswa"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/data_siswa"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginTop="@dimen/_12sdp"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btn_data_petugas"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_160sdp"
+        android:layout_toRightOf="@id/btn_data_siswa"
+        android:layout_below="@id/view"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardElevation="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_15sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_35sdp"
+                android:src="@drawable/ic_petugas"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/data_petugas"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginTop="@dimen/_12sdp"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btn_data_kelas"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_160sdp"
+        android:layout_below="@id/btn_data_siswa"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardElevation="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginStart="@dimen/_25sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_35sdp"
+                android:src="@drawable/ic_kelas"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/data_kelas"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginTop="@dimen/_12sdp"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btn_data_spp"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_160sdp"
+        android:layout_below="@id/btn_data_petugas"
+        android:layout_toRightOf="@id/btn_data_kelas"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardElevation="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:clickable="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_35sdp"
+                android:src="@drawable/ic_agenda"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/data_spp"
+                android:textSize="@dimen/_15sdp"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginTop="@dimen/_12sdp"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

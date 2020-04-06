@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".admin.datasiswa.DetailDataSiswaActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_250sdp"
+            android:background="@drawable/actionbar_background"/>
+
+        <ImageView
+            android:id="@+id/img_profile"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:src="@drawable/ic_user"
+            android:layout_marginTop="@dimen/_30sdp"/>
+
+        <TextView
+            android:id="@+id/nama_siswa_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fajar Faturrahman"
+            android:layout_below="@id/img_profile"
+            android:textSize="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/nis_siswa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1718117117"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_20sdp"
+            android:gravity="center_horizontal"
+            android:layout_below="@id/nama_siswa_profile"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/_14sdp"
+            android:elevation="@dimen/_8sdp"
+            app:cardElevation="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_25sdp"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_below="@id/view">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <View
+                    android:id="@+id/view_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_20sdp"
+                    android:background="@drawable/background_detail_data_diri"/>
+
+                <TextView
+                    android:id="@+id/title_data_diri"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Data Diri Lengkap siswa"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_13sdp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_2sdp" />
+
+                <TextView
+                    android:id="@+id/ket_kelas"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view_detail"
+                    android:text="Kelas       :"
+                    android:textColor="@color/TextDetailColor"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:textSize="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_14sdp"/>
+
+                <TextView
+                    android:id="@+id/kelas_profile"
+                    android:layout_width="@dimen/_140sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view_detail"
+                    android:layout_toRightOf="@id/ket_kelas"
+                    android:text="XII RPL 1"
+                    android:textColor="@color/TextDetailColor"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:textSize="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_14sdp"/>
+
+                <TextView
+                    android:id="@+id/ket_nisn"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ket_kelas"
+                    android:text="NISN        :"
+                    android:textColor="@color/TextDetailColor"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:textSize="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_14sdp"/>
+
+                <TextView
+                    android:id="@+id/nisn_profile"
+                    android:layout_width="@dimen/_140sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ket_kelas"
+                    android:layout_toRightOf="@id/ket_nisn"
+                    android:text="32012913812"
+                    android:textColor="@color/TextDetailColor"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:textSize="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_14sdp"/>
+
+                <TextView
+                    android:id="@+id/ket_telp"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ket_nisn"
+                    android:text="No. Telp  :"
+                    android:textColor="@color/TextDetailColor"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:textSize="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_14sdp"/>
+
+                <TextView
+                    android:id="@+id/telp_profile"
+                    android:layout_width="@dimen/_140sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ket_nisn"
+                    android:layout_toRightOf="@id/ket_telp"
+                    android:text="08888023333333"
+                    android:textColor="@color/TextDetailColor"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:textSize="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_14sdp"/>
+
+                <TextView
+                    android:id="@+id/ket_id_spp"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ket_telp"
+                    android:text="ID SPP     :"
+                    android:textColor="@color/TextDetailColor"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:textSize="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_14sdp" />
+
+                <TextView
+                    android:id="@+id/id_spp_profile"
+                    android:layout_width="@dimen/_140sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ket_telp"
+                    android:layout_toRightOf="@id/ket_id_spp"
+                    android:text="2092"
+                    android:textColor="@color/TextDetailColor"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:textSize="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_14sdp" />
+
+                <TextView
+                    android:id="@+id/ket_alamat"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ket_id_spp"
+                    android:text="Alamat    :"
+                    android:textColor="@color/TextDetailColor"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:textSize="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_14sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"/>
+
+                <TextView
+                    android:id="@+id/alamat"
+                    android:layout_width="@dimen/_140sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ket_id_spp"
+                    android:layout_toRightOf="@id/ket_alamat"
+                    android:text="Kp. Bojong Asih RT 04/05"
+                    android:textColor="@color/TextDetailColor"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:textSize="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_14sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"/>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/btn_edit_siswa"
+            android:text="Ubah Data Siswa"
+            android:layout_marginTop="@dimen/_10sdp"
+            style="@style/ButtonUbahData"
+            android:layout_below="@id/card_detail"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
+</ScrollView>

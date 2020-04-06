@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">SppPay</string>
+    <string name="title_activity_main_siswa">MainActivitySiswa</string>
+    <string name="title_home">Beranda</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="profile">Profil</string>
+    <string name="riwayat_pembayaran">Riwayat Pembayaran</string>
+    <string name="data_diri_lengkap_anda">Data Diri Lengkap Anda</string>
+    <string name="alamat">Alamat :</string>
+    <string name="nisn">NISN :</string>
+    <string name="kelas">Kelas :</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="riwayat">Riwayat</string>
+    <string name="laporan">Laporan</string>
+    <string name="bayar_spp">Bayar SPP</string>
+    <string name="title_activity_main_admin">MainActivityAdmin</string>
+    <string name="data_siswa">Data Siswa</string>
+    <string name="data_petugas">Data Petugas</string>
+    <string name="data_kelas">Data Kelas</string>
+    <string name="data_spp">Data SPP</string>
+    <string name="data_siswa">Data Siswa</string>
+    <string name="kelola_data">KELOLA DATA</string>
+</resources>

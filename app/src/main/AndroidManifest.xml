@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.spppay">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".petugas.MainActivityPetugas"></activity>
+        <activity android:name=".admin.datakelas.FormDataKelasActivity" />
+        <activity android:name=".admin.datakelas.DataKelasActivity" />
+        <activity android:name=".admin.dataspp.FormDataSppActivity" />
+        <activity android:name=".admin.dataspp.DataSppActivity" />
+        <activity android:name=".admin.datapetugas.FormDataPetugasActivity" />
+        <activity android:name=".admin.datapetugas.DetailDataPetugasActivity" />
+        <activity android:name=".admin.datapetugas.DataPetugasActivity" />
+        <activity android:name=".admin.datasiswa.DetailDataSiswaActivity" />
+        <activity android:name=".admin.datasiswa.FormDataSiswaActivity" />
+        <activity android:name=".admin.datasiswa.DataSiswaActivity" />
+        <activity
+            android:name=".admin.MainActivityAdmin"
+            android:label="@string/title_activity_main_admin">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".siswa.MainActivitySiswa"
+            android:label="@string/title_activity_main_siswa" />
+        <activity android:name=".LoginActivity" />
+    </application>
+
+</manifest>

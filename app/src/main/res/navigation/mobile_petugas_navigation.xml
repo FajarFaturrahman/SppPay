@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_petugas_navigation"
+    app:startDestination="@id/homePetugasFragment">
+
+    <fragment
+        android:id="@+id/homePetugasFragment"
+        android:name="com.example.spppay.petugas.HomePetugasFragment"
+        android:label="fragment_home_petugas"
+        tools:layout="@layout/fragment_home_petugas" />
+    <fragment
+        android:id="@+id/riwayatPetugasFragment"
+        android:name="com.example.spppay.petugas.RiwayatPetugasFragment"
+        android:label="fragment_riwayat_petugas"
+        tools:layout="@layout/fragment_riwayat_petugas" />
+    <fragment
+        android:id="@+id/profilePetugasFragment"
+        android:name="com.example.spppay.petugas.ProfilePetugasFragment"
+        android:label="fragment_profile_petugas"
+        tools:layout="@layout/fragment_profile_petugas" />
+</navigation>

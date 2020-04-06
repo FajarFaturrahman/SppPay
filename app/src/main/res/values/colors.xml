@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1CAEFF</color>
+    <color name="colorPrimaryDark">#1CAEFF</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="FontLogin">#27A5F2</color>
+    <color name="FontColor2">#1EADFF</color>
+    <color name="background_edittext">#4996FD</color>
+    <color name="backgroundTextDataDiri">#DDDDDD</color>
+    <color name="TextDetailColor">#464141</color>
+    
+    <color name="colorNavigationIcon">#FFFFFF</color>
+    <color name="colorNavigationText">#FFFFFF</color>
+</resources>

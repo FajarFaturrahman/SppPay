@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".admin.datapetugas.DetailDataPetugasActivity">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        android:background="@drawable/actionbar_background"/>
+
+    <ImageView
+        android:id="@+id/img_profile"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp"
+        android:src="@drawable/ic_user"
+        android:layout_marginTop="@dimen/_30sdp"/>
+
+    <TextView
+        android:id="@+id/nama_admin_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ujang Hayu"
+        android:layout_below="@id/img_profile"
+        android:textSize="@dimen/_25sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="center_horizontal"/>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_14sdp"
+        android:elevation="@dimen/_8sdp"
+        app:cardElevation="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_25sdp"
+        android:layout_marginStart="@dimen/_25sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_below="@id/view">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/view_detail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_20sdp"
+                android:background="@drawable/background_detail_data_diri"/>
+
+            <TextView
+                android:id="@+id/title_data_diri"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/data_diri_lengkap_anda"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_13sdp"
+                android:fontFamily="@font/roboto_bold"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_2sdp" />
+
+            <TextView
+                android:id="@+id/ket_id_petugas"
+                android:layout_width="@dimen/_85sdp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_detail"
+                android:text="ID Petugas   :"
+                android:textColor="@color/TextDetailColor"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:textSize="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_14sdp"/>
+
+            <TextView
+                android:id="@+id/id_petugas_profile"
+                android:layout_width="@dimen/_130sdp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_detail"
+                android:layout_toRightOf="@id/ket_id_petugas"
+                android:text="32012913812"
+                android:textColor="@color/TextDetailColor"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:textSize="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_14sdp"/>
+
+            <TextView
+                android:id="@+id/ket_username_profile"
+                android:layout_width="@dimen/_85sdp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ket_id_petugas"
+                android:text="Username    :"
+                android:textColor="@color/TextDetailColor"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:textSize="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_14sdp"/>
+
+            <TextView
+                android:id="@+id/username_profile"
+                android:layout_width="@dimen/_130sdp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ket_id_petugas"
+                android:layout_toRightOf="@id/ket_username_profile"
+                android:text="ujanghayu"
+                android:textColor="@color/TextDetailColor"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:textSize="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_14sdp"/>
+
+            <TextView
+                android:id="@+id/ket_level_profile"
+                android:layout_width="@dimen/_85sdp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ket_username_profile"
+                android:text="Level              :"
+                android:textColor="@color/TextDetailColor"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:textSize="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_14sdp"/>
+
+            <TextView
+                android:id="@+id/telp_profile"
+                android:layout_width="@dimen/_130sdp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ket_username_profile"
+                android:layout_toRightOf="@id/ket_level_profile"
+                android:text="08888023333333"
+                android:textColor="@color/TextDetailColor"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:textSize="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:layout_marginBottom="@dimen/_20sdp"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btn_edit_petugas"
+        android:text="Ubah Data PETUGAS"
+        android:layout_marginTop="@dimen/_40sdp"
+        style="@style/ButtonUbahData"
+        android:layout_below="@id/card_detail"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

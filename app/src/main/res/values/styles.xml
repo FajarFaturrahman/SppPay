@@ -1,0 +1,72 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="ButtonLoginDanSimpan">
+        <item name="android:layout_width">@dimen/_170sdp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/_20sdp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="fontFamily">@font/roboto_bold</item>
+        <item name="android:background">@drawable/rounded_buttin</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="ButtonLogout">
+        <item name="android:layout_width">@dimen/_170sdp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/_20sdp</item>
+        <item name="fontFamily">@font/roboto_bold</item>
+        <item name="android:background">@drawable/rounded_buttin</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:drawableEnd">@drawable/ic_logout</item>
+    </style>
+
+    <style name="ButtonUbahData">
+        <item name="android:layout_width">@dimen/_170sdp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/_10sdp</item>
+        <item name="fontFamily">@font/roboto_bold</item>
+        <item name="android:background">@drawable/rounded_buttin</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="TextNamaUser">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/_20sdp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="fontFamily">@font/roboto_bold</item>
+        <item name="android:layout_marginTop">@dimen/_17sdp</item>
+        <item name="android:layout_marginStart">@dimen/_20sdp</item>
+    </style>
+
+    <style name="TextJudulHalaman">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/_27sdp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="fontFamily">@font/roboto_bold</item>
+        <item name="android:layout_marginTop">@dimen/_25sdp</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <style name="TextRole">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/_15sdp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="fontFamily">@font/roboto_regular</item>
+        <item name="android:layout_marginStart">@dimen/_20sdp</item>
+
+    </style>
+
+</resources>

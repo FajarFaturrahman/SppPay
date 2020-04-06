@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_admin_navigation"
+    app:startDestination="@id/navigation_home_admin">
+
+    <fragment
+        android:id="@+id/navigation_home_admin"
+        android:name="com.example.spppay.admin.HomeAdminFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home_admin" />
+    <fragment
+        android:id="@+id/navigation_riwayat_admin"
+        android:name="com.example.spppay.admin.RiwayatAdminFragment"
+        android:label="@string/riwayat"
+        tools:layout="@layout/fragment_riwayat_admin" />
+    <fragment
+        android:id="@+id/navigation_laporan_admin"
+        android:name="com.example.spppay.admin.LaporanAdminFragment"
+        android:label="@string/laporan"
+        tools:layout="@layout/fragment_laporan_admin" />
+    <fragment
+        android:id="@+id/navigation_bayar_admin"
+        android:name="com.example.spppay.admin.BayarAdminFragment"
+        android:label="@string/bayar_spp"
+        tools:layout="@layout/fragment_bayar_admin" />
+    <fragment
+        android:id="@+id/navigation_profile_admin"
+        android:name="com.example.spppay.admin.ProfileAdminFragment"
+        android:label="@string/profile"
+        tools:layout="@layout/fragment_profile_admin" />
+</navigation>
