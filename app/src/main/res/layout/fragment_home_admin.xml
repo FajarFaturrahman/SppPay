@@ -31,9 +31,11 @@
         app:cardCornerRadius="@dimen/_10sdp"
         app:cardElevation="@dimen/_10sdp"
         android:layout_marginTop="@dimen/_30sdp"
-        android:layout_marginStart="@dimen/_25sdp">
+        android:layout_marginStart="@dimen/_25sdp"
+        android:clickable="true">
 
         <LinearLayout
+            android:id="@+id/btn_siswa"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
@@ -70,6 +72,7 @@
         android:layout_marginStart="@dimen/_15sdp">
 
         <LinearLayout
+            android:id="@+id/btn_petugas"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
@@ -105,6 +108,7 @@
         android:layout_marginStart="@dimen/_25sdp">
 
         <LinearLayout
+            android:id="@+id/btn_kelas"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
@@ -142,6 +146,7 @@
         android:clickable="true">
 
         <LinearLayout
+            android:id="@+id/btn_spp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">

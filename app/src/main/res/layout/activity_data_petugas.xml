@@ -27,6 +27,6 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="@dimen/_50sdp"
         android:layout_marginEnd="@dimen/_30sdp"
-        android:backgroundTint="@color/colorPrimary"/>
+        android:backgroundTint="@color/colorPrimary" />
 
 </RelativeLayout>

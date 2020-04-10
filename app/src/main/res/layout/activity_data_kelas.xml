@@ -18,6 +18,15 @@
         android:text="@string/data_kelas"
         />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv__kelas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_below="@id/view"
+        android:layout_marginTop="@dimen/_15sdp"/>
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/add_data_kelas"
         android:layout_width="@dimen/_50sdp"
@@ -27,6 +36,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="@dimen/_50sdp"
         android:layout_marginEnd="@dimen/_30sdp"
-        android:backgroundTint="@color/colorPrimary"/>
+        android:backgroundTint="@color/colorPrimary"
+        android:outlineSpotShadowColor="@color/colorPrimary" />
 
 </RelativeLayout>
