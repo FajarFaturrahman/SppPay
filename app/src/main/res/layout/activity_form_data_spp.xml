@@ -72,7 +72,7 @@
                 android:padding="@dimen/_2sdp"
                 android:inputType="text"
                 android:textSize="@dimen/_10sdp"
-                android:hint="contoh : 2019/2020"
+                android:hint="contoh : 2019"
                 android:layout_marginTop="@dimen/_3sdp"
                 android:layout_marginStart="@dimen/_20sdp"
                 android:layout_marginEnd="@dimen/_20sdp"
