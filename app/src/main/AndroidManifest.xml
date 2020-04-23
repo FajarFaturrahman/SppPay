@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".petugas.MainActivityPetugas"></activity>
+        <activity android:name=".petugas.PaymentSuccessPetugas"></activity>
+        <activity android:name=".admin.PaymentSuccess" />
+        <activity android:name=".petugas.PembayaranPetugas" />
+        <activity android:name=".petugas.MainActivityPetugas" />
         <activity android:name=".admin.datakelas.FormDataKelasActivity" />
         <activity android:name=".admin.datakelas.DataKelasActivity" />
         <activity android:name=".admin.dataspp.FormDataSppActivity" />

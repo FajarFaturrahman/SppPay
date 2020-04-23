@@ -20,9 +20,24 @@
     <string name="data_kelas">Data Kelas</string>
     <string name="data_spp">Data SPP</string>
     <string name="kelola_data">KELOLA DATA</string>
-    
+
     <string-array name="role_petugas">
         <item>petugas</item>
         <item>admin</item>
+    </string-array>
+
+    <string-array name="bulan_bayar">
+        <item>Januari</item>
+        <item>Februari</item>
+        <item>Maret</item>
+        <item>April</item>
+        <item>Mei</item>
+        <item>Juni</item>
+        <item>Juli</item>
+        <item>Agustus</item>
+        <item>September</item>
+        <item>Oktober</item>
+        <item>November</item>
+        <item>Desember</item>
     </string-array>
 </resources>

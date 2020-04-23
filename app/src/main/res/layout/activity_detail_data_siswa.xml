@@ -24,7 +24,7 @@
             android:layout_marginTop="@dimen/_30sdp"/>
 
         <TextView
-            android:id="@+id/nama_siswa_profile"
+            android:id="@+id/nama_siswa_detail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Fajar Faturrahman"
@@ -36,14 +36,14 @@
             android:gravity="center_horizontal"/>
 
         <TextView
-            android:id="@+id/nis_siswa"
+            android:id="@+id/nis_siswa_detail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="1718117117"
             android:textColor="@android:color/white"
             android:textSize="@dimen/_20sdp"
             android:gravity="center_horizontal"
-            android:layout_below="@id/nama_siswa_profile"/>
+            android:layout_below="@id/nama_siswa_detail"/>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/card_detail"
@@ -91,7 +91,7 @@
                     android:layout_marginTop="@dimen/_14sdp"/>
 
                 <TextView
-                    android:id="@+id/kelas_profile"
+                    android:id="@+id/kelas_detail"
                     android:layout_width="@dimen/_140sdp"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/view_detail"
@@ -114,7 +114,7 @@
                     android:layout_marginTop="@dimen/_14sdp"/>
 
                 <TextView
-                    android:id="@+id/nisn_profile"
+                    android:id="@+id/nisn_detail"
                     android:layout_width="@dimen/_140sdp"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/ket_kelas"
@@ -137,7 +137,7 @@
                     android:layout_marginTop="@dimen/_14sdp"/>
 
                 <TextView
-                    android:id="@+id/telp_profile"
+                    android:id="@+id/telp_detail"
                     android:layout_width="@dimen/_140sdp"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/ket_nisn"
@@ -160,7 +160,7 @@
                     android:layout_marginTop="@dimen/_14sdp" />
 
                 <TextView
-                    android:id="@+id/id_spp_profile"
+                    android:id="@+id/id_spp_detail"
                     android:layout_width="@dimen/_140sdp"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/ket_telp"
@@ -184,7 +184,7 @@
                     android:layout_marginBottom="@dimen/_20sdp"/>
 
                 <TextView
-                    android:id="@+id/alamat"
+                    android:id="@+id/alamat_detail"
                     android:layout_width="@dimen/_140sdp"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/ket_id_spp"

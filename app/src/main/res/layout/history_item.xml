@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cv_riwayat"
     android:layout_width="match_parent"
     android:layout_height="@dimen/_110sdp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -95,15 +96,6 @@
             android:maxLines="2"
             android:ellipsize="end"
             android:layout_marginTop="@dimen/_5sdp"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Tap For Detail"
-            android:textSize="@dimen/_7sdp"
-            android:textColor="@android:color/black"
-            android:layout_alignParentBottom="true"
-            android:gravity="center"/>
 
     </RelativeLayout>
 

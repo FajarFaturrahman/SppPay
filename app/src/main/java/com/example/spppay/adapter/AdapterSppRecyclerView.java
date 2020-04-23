@@ -26,7 +26,7 @@ public class AdapterSppRecyclerView extends RecyclerView.Adapter<AdapterSppRecyc
     private ArrayList<Spp> daftarSpp;
     private Context context;
     private AppDatabase db;
-    int tahun, nominal;
+    Integer tahun, nominal;
 
     public AdapterSppRecyclerView(ArrayList<Spp> daftarSpp, Context context) {
         this.daftarSpp = daftarSpp;

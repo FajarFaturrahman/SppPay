@@ -96,17 +96,19 @@ public class FormDataSppActivity extends AppCompatActivity {
         }.execute();
     }
 
+
+
     private void afterClickInsertButton(){
         tahun = Integer.parseInt(edtTahun.getText().toString());
         nominal = Integer.parseInt(edtNominal.getText().toString());
 
         Spp spp = new Spp();
         spp.setTahun(tahun);
-        spp.setTahun(nominal);
+        spp.setNominal(nominal);
 
-        if (tahun.equals(0)){
+        if (tahun.equals(null)){
             Toasty.warning(FormDataSppActivity.this, "Nama Kelas Harus Diisi", Toast.LENGTH_SHORT, true).show();
-        }else if (nominal.equals(0)){
+        }else if (nominal.equals(null)){
             Toasty.warning(FormDataSppActivity.this, "Kompetensi Keahlian Harus Diisi", Toast.LENGTH_SHORT, true).show();
         }else{
             insertSpp(spp);
@@ -122,9 +124,9 @@ public class FormDataSppActivity extends AppCompatActivity {
         spp.setTahun(tahun);
         spp.setNominal(nominal);
 
-        if(tahun.equals(0)){
+        if(tahun.equals(null)){
             Toasty.warning(FormDataSppActivity.this, "Tahun Harus Diisi", Toast.LENGTH_SHORT, true).show();
-        }else if (nominal.equals(0)){
+        }else if (nominal.equals(null)){
             Toasty.warning(FormDataSppActivity.this, "Nominal Harus Diisi", Toast.LENGTH_SHORT, true).show();
         }else{
             UpdateSpp(spp);

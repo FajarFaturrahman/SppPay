@@ -3,6 +3,7 @@ package com.example.spppay.model;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 import java.io.Serializable;
@@ -13,16 +14,16 @@ public class Siswa implements Serializable {
 
     @PrimaryKey(autoGenerate = false)
     @ColumnInfo(name = "nisn")
-    public char nisn;
+    public int nisn;
 
     @ColumnInfo(name = "nis")
-    public char nis;
+    public String nis;
 
     @ColumnInfo(name = "nama")
     public String nama;
 
-    @ColumnInfo(name = "id_kelas")
-    public int id_kelas;
+    @ColumnInfo(name = "nama_kelas_siswa")
+    public String nama_kelas_siswa;
 
     @ColumnInfo(name = "alamat")
     public String alamat;
@@ -30,22 +31,22 @@ public class Siswa implements Serializable {
     @ColumnInfo(name = "no_telp")
     public String no_telp;
 
-    @ColumnInfo(name = "id_spp")
-    public int id_spp;
+    @ColumnInfo(name = "Uid_spp")
+    public int Uid_spp;
 
-    public char getNisn() {
+    public int getNisn() {
         return nisn;
     }
 
-    public void setNisn(char nisn) {
+    public void setNisn(int nisn) {
         this.nisn = nisn;
     }
 
-    public char getNis() {
+    public String getNis() {
         return nis;
     }
 
-    public void setNis(char nis) {
+    public void setNis(String nis) {
         this.nis = nis;
     }
 
@@ -55,14 +56,6 @@ public class Siswa implements Serializable {
 
     public void setNama(String nama) {
         this.nama = nama;
-    }
-
-    public int getId_kelas() {
-        return id_kelas;
-    }
-
-    public void setId_kelas(int id_kelas) {
-        this.id_kelas = id_kelas;
     }
 
     public String getAlamat() {
@@ -81,11 +74,22 @@ public class Siswa implements Serializable {
         this.no_telp = no_telp;
     }
 
-    public int getId_spp() {
-        return id_spp;
+
+    public void setNama_kelas_siswa(String nama_kelas_siswa) {
+        this.nama_kelas_siswa = nama_kelas_siswa;
     }
 
-    public void setId_spp(int id_spp) {
-        this.id_spp = id_spp;
+    public void setUid_spp(int uid_spp) {
+        Uid_spp = uid_spp;
     }
+
+    public String getNama_kelas_siswa() {
+        return nama_kelas_siswa;
+    }
+
+    public int getUid_spp() {
+        return Uid_spp;
+    }
+
 }
+

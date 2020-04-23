@@ -1,31 +1,25 @@
-package com.example.spppay.admin;
+package com.example.spppay.petugas;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Room;
 
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-import androidx.room.Room;
-
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.spppay.R;
-import com.example.spppay.admin.datapetugas.DataPetugasActivity;
-import com.example.spppay.admin.datapetugas.FormDataPetugasActivity;
+import com.example.spppay.admin.PaymentSuccess;
 import com.example.spppay.data.factory.AppDatabase;
 import com.example.spppay.model.Pembayaran;
-import com.example.spppay.model.Petugas;
 
 import es.dmoral.toasty.Toasty;
 
-
-public class BayarAdminFragment extends Fragment {
+public class PembayaranPetugas extends AppCompatActivity {
 
     private AppDatabase db;
     EditText edtPetugas, edtNisn, edtTglBayar, edtThnBayar, edtIdSpp, edtJmlBayar, edtSiswa;
@@ -35,32 +29,28 @@ public class BayarAdminFragment extends Fragment {
     Integer nisn, thnBayar, idSpp, jmlBayar;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_pembayaran_petugas);
 
-         View view = inflater.inflate(R.layout.fragment_bayar_admin, container, false);
+        db = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, "pembayarandb").build();
 
-         db = Room.databaseBuilder(getActivity().getApplicationContext(), AppDatabase.class, "bayardb").build();
+        edtPetugas = findViewById(R.id.edt_bayar_petugas);
+        edtNisn    = findViewById(R.id.edt_nisn_bayar);
+        edtSiswa   = findViewById(R.id.edt_siswa_bayar);
+        edtTglBayar= findViewById(R.id.tgl_bayar);
+        bulanBayar = findViewById(R.id.spin_bulan_bayar);
+        edtThnBayar= findViewById(R.id.edt_tahun_bayar);
+        edtIdSpp   = findViewById(R.id.edt_id_spp_bayar);
+        edtJmlBayar= findViewById(R.id.edt_jml_bayar);
+        btnBayar   = findViewById(R.id.btn_bayar_admin);
 
-         edtPetugas = view.findViewById(R.id.edt_bayar_petugas);
-         edtNisn    = view.findViewById(R.id.edt_nisn_bayar);
-         edtSiswa   = view.findViewById(R.id.edt_siswa_bayar);
-         edtTglBayar= view.findViewById(R.id.tgl_bayar);
-         bulanBayar = view.findViewById(R.id.spin_bulan_bayar);
-         edtThnBayar= view.findViewById(R.id.edt_tahun_bayar);
-         edtIdSpp   = view.findViewById(R.id.edt_id_spp_bayar);
-         edtJmlBayar= view.findViewById(R.id.edt_jml_bayar);
-         btnBayar   = view.findViewById(R.id.btn_bayar_admin);
-
-         btnBayar.setOnClickListener(new View.OnClickListener() {
-             @Override
-             public void onClick(View v) {
-                 afterClickPayButton();
-             }
-         });
-
-        return view;
+        btnBayar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                afterClickPayButton();
+            }
+        });
     }
 
     private void insertPembayaran(final Pembayaran pembayaran){
@@ -73,7 +63,7 @@ public class BayarAdminFragment extends Fragment {
 
             @Override
             protected void onPostExecute(Long aLong) {
-                Intent intent = new Intent(getActivity(), PaymentSuccess.class);
+                Intent intent = new Intent(PembayaranPetugas.this, PaymentSuccess.class);
                 startActivity(intent);
             }
         }.execute();
@@ -100,19 +90,19 @@ public class BayarAdminFragment extends Fragment {
         pembayaran.setJml_bayar(jmlBayar);
 
         if (namaPetugas.isEmpty()){
-            Toasty.warning(getActivity(), "Nama Petugas Harus Diisi", Toast.LENGTH_SHORT, true).show();
+            Toasty.warning(PembayaranPetugas.this, "Nama Petugas Harus Diisi", Toast.LENGTH_SHORT, true).show();
         }else if (nisn.equals(null)){
-            Toasty.warning(getActivity(), "NISN Harus Diisi", Toast.LENGTH_SHORT, true).show();
+            Toasty.warning(PembayaranPetugas.this, "NISN Harus Diisi", Toast.LENGTH_SHORT, true).show();
         }else if (namaSiswa.isEmpty()){
-            Toasty.warning(getActivity(), "Nama Siswa Harus Diisi", Toast.LENGTH_SHORT, true).show();
+            Toasty.warning(PembayaranPetugas.this, "Nama Siswa Harus Diisi", Toast.LENGTH_SHORT, true).show();
         }else if (tglBayar.isEmpty()){
-            Toasty.warning(getActivity(), "Tanggal Bayar Harus Diisi", Toast.LENGTH_SHORT, true).show();
+            Toasty.warning(PembayaranPetugas.this, "Tanggal Bayar Harus Diisi", Toast.LENGTH_SHORT, true).show();
         }else if (thnBayar.equals(null)){
-            Toasty.warning(getActivity(), "Tahun Bayar Harus Diisi", Toast.LENGTH_SHORT, true).show();
+            Toasty.warning(PembayaranPetugas.this, "Tahun Bayar Harus Diisi", Toast.LENGTH_SHORT, true).show();
         }else if (idSpp.equals(null)){
-            Toasty.warning(getActivity(), "ID SPP Harus Diisi", Toast.LENGTH_SHORT, true).show();
+            Toasty.warning(PembayaranPetugas.this, "ID SPP Harus Diisi", Toast.LENGTH_SHORT, true).show();
         }else if (jmlBayar.equals(null)){
-            Toasty.warning(getActivity(), "Jumlah Bayar Harus Diisi", Toast.LENGTH_SHORT, true).show();
+            Toasty.warning(PembayaranPetugas.this, "Jumlah Bayar Harus Diisi", Toast.LENGTH_SHORT, true).show();
         }else{
             insertPembayaran(pembayaran);
         }

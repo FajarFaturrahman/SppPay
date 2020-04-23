@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".admin.datasiswa.FormDataSiswaActivity">
+    tools:context=".petugas.PembayaranPetugas">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -24,7 +24,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_29sdp"
-            android:text="@string/data_siswa"
+            android:text="Pembayaran"
             android:textColor="#ffffff"
             android:textSize="@dimen/_27sdp"
             android:textStyle="bold"
@@ -54,7 +54,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="@dimen/_20sdp"
-                    android:text="@string/kelola_data"
+                    android:text="Bayar SPP"
                     android:fontFamily="@font/roboto_bold"
                     android:textColor="@color/FontLogin"
                     android:textSize="@dimen/_27sdp" />
@@ -62,7 +62,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Nomor Induk Siswa Nasional"
+                    android:text="Nama Petugas"
                     android:textColor="@color/FontColor2"
                     android:fontFamily="@font/roboto_regular"
                     android:layout_marginTop="@dimen/_13sdp"
@@ -70,11 +70,10 @@
                     />
 
                 <EditText
-                    android:id="@+id/edt_nisn"
+                    android:id="@+id/edt_bayar_petugas"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/_5sdp"
-                    android:inputType="numberDecimal"
                     android:textSize="@dimen/_10sdp"
                     android:layout_marginTop="@dimen/_3sdp"
                     android:layout_marginStart="@dimen/_20sdp"
@@ -84,7 +83,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Nomor Induk Siswa"
+                    android:text="Nomor Induk Siswa Nasional"
                     android:textColor="@color/FontColor2"
                     android:fontFamily="@font/roboto_regular"
                     android:layout_marginTop="@dimen/_5sdp"
@@ -92,12 +91,12 @@
                     />
 
                 <EditText
-                    android:id="@+id/edt_nis"
+                    android:id="@+id/edt_nisn_bayar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/_5sdp"
-                    android:inputType="numberDecimal"
                     android:textSize="@dimen/_10sdp"
+                    android:inputType="number"
                     android:layout_marginTop="@dimen/_3sdp"
                     android:layout_marginStart="@dimen/_20sdp"
                     android:layout_marginEnd="@dimen/_20sdp"
@@ -109,12 +108,12 @@
                     android:text="Nama Siswa"
                     android:textColor="@color/FontColor2"
                     android:fontFamily="@font/roboto_regular"
-                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_13sdp"
                     android:layout_marginStart="@dimen/_22sdp"
                     />
 
                 <EditText
-                    android:id="@+id/edt_nama_siswa"
+                    android:id="@+id/edt_siswa_bayar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/_5sdp"
@@ -127,7 +126,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Kelas"
+                    android:text="Tanggal Bayar"
                     android:textColor="@color/FontColor2"
                     android:fontFamily="@font/roboto_regular"
                     android:layout_marginTop="@dimen/_5sdp"
@@ -135,21 +134,41 @@
                     />
 
                 <EditText
-                    android:id="@+id/edt_kelas_siswa"
+                    android:id="@+id/tgl_bayar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:padding="@dimen/_5sdp"
+                    android:hint="dd/mm/yyyy"
+                    android:textSize="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:backgroundTint="@color/background_edittext"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bulan Dibayar"
+                    android:textColor="@color/FontColor2"
+                    android:fontFamily="@font/roboto_regular"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginStart="@dimen/_22sdp"
+                    />
+
+                <Spinner
+                    android:id="@+id/spin_bulan_bayar"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_marginStart="@dimen/_20sdp"
                     android:layout_marginTop="@dimen/_10sdp"
-                    android:inputType="text"
-                    android:textSize="@dimen/_10sdp"
-                    android:hint="contoh : XII RPL 1"
-                    android:layout_marginStart="@dimen/_20sdp"
                     android:layout_marginEnd="@dimen/_20sdp"
-                    android:backgroundTint="@color/colorPrimary" />
+                    android:backgroundTint="@color/colorPrimary"
+                    android:entries="@array/bulan_bayar" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Alamat"
+                    android:text="Tahun Dibayar"
                     android:textColor="@color/FontColor2"
                     android:fontFamily="@font/roboto_regular"
                     android:layout_marginTop="@dimen/_5sdp"
@@ -157,32 +176,11 @@
                     />
 
                 <EditText
-                    android:id="@+id/edt_alamat_siswa"
+                    android:id="@+id/edt_tahun_bayar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/_5sdp"
-                    android:textSize="@dimen/_10sdp"
-                    android:layout_marginTop="@dimen/_3sdp"
-                    android:layout_marginStart="@dimen/_20sdp"
-                    android:layout_marginEnd="@dimen/_20sdp"
-                    android:backgroundTint="@color/background_edittext"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="No. Telp"
-                    android:textColor="@color/FontColor2"
-                    android:fontFamily="@font/roboto_regular"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:layout_marginStart="@dimen/_22sdp"
-                    />
-
-                <EditText
-                    android:id="@+id/edt_telp_siswa"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="@dimen/_5sdp"
-                    android:inputType="numberDecimal"
+                    android:inputType="number"
                     android:textSize="@dimen/_10sdp"
                     android:layout_marginTop="@dimen/_3sdp"
                     android:layout_marginStart="@dimen/_20sdp"
@@ -200,20 +198,43 @@
                     />
 
                 <EditText
-                    android:id="@+id/edt_id_spp_siswa"
+                    android:id="@+id/edt_id_spp_bayar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:padding="@dimen/_5sdp"
+                    android:textSize="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:backgroundTint="@color/background_edittext"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jumlah Bayar"
+                    android:textColor="@color/FontColor2"
+                    android:fontFamily="@font/roboto_regular"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginStart="@dimen/_22sdp"
+                    />
+
+                <EditText
+                    android:id="@+id/edt_jml_bayar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/_5sdp"
                     android:inputType="numberDecimal"
                     android:textSize="@dimen/_10sdp"
-                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
                     android:layout_marginStart="@dimen/_20sdp"
                     android:layout_marginEnd="@dimen/_20sdp"
-                    android:backgroundTint="@color/colorPrimary" />
+                    android:backgroundTint="@color/background_edittext"/>
+
 
 
                 <Button
-                    android:id="@+id/simpan_data_siswa"
+                    android:id="@+id/btn_bayar_admin"
                     android:text="SIMPAN"
                     android:layout_marginTop="@dimen/_40sdp"
                     android:layout_marginBottom="@dimen/_20sdp"

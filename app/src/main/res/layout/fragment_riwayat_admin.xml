@@ -19,7 +19,6 @@
         />
 
 
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_riwayat_admin"
         android:layout_width="match_parent"

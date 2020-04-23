@@ -24,7 +24,7 @@
         style="@style/TextRole"/>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/btn_data_siswa"
+        android:id="@+id/btn_laporan"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_160sdp"
         android:layout_below="@id/view"
@@ -40,11 +40,11 @@
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="@dimen/_40sdp"
-                android:layout_height="@dimen/_40sdp"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/_35sdp"
-                android:src="@drawable/ic_siswa"/>
+                android:src="@drawable/archive"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -60,10 +60,10 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/btn_data_kelas"
+        android:id="@+id/btn_bayar_petugas"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_160sdp"
-        android:layout_below="@id/btn_data_siswa"
+        android:layout_below="@id/btn_laporan"
         app:cardCornerRadius="@dimen/_10sdp"
         app:cardElevation="@dimen/_10sdp"
         android:layout_marginTop="@dimen/_15sdp"
@@ -76,11 +76,11 @@
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="@dimen/_40sdp"
-                android:layout_height="@dimen/_40sdp"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/_35sdp"
-                android:src="@drawable/ic_kelas"/>
+                android:src="@drawable/ic_bayar"/>
 
             <TextView
                 android:layout_width="wrap_content"
