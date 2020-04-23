@@ -78,7 +78,7 @@
                 android:layout_marginTop="@dimen/_14sdp"/>
 
             <TextView
-                android:id="@+id/id_petugas_profile"
+                android:id="@+id/id_admin_profile"
                 android:layout_width="@dimen/_130sdp"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/view_detail"

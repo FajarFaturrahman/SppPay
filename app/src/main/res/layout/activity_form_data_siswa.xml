@@ -127,28 +127,6 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Kata Sandi"
-                    android:textColor="@color/FontColor2"
-                    android:fontFamily="@font/roboto_regular"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:layout_marginStart="@dimen/_22sdp"
-                    />
-
-                <EditText
-                    android:id="@+id/edt_kata_sandi_siswa"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="@dimen/_5sdp"
-                    android:inputType="textPassword"
-                    android:textSize="@dimen/_10sdp"
-                    android:layout_marginTop="@dimen/_3sdp"
-                    android:layout_marginStart="@dimen/_20sdp"
-                    android:layout_marginEnd="@dimen/_20sdp"
-                    android:backgroundTint="@color/background_edittext"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:text="Kelas"
                     android:textColor="@color/FontColor2"
                     android:fontFamily="@font/roboto_regular"
@@ -218,10 +196,13 @@
                     android:layout_marginStart="@dimen/_22sdp"
                     />
 
-                <Spinner
-                    android:id="@+id/spin_id_spp_siswa"
+                <EditText
+                    android:id="@+id/edt_id_spp_siswa"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_25sdp"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_5sdp"
+                    android:inputType="numberDecimal"
+                    android:textSize="@dimen/_10sdp"
                     android:layout_marginTop="@dimen/_10sdp"
                     android:layout_marginStart="@dimen/_20sdp"
                     android:layout_marginEnd="@dimen/_20sdp"
@@ -229,7 +210,7 @@
 
 
                 <Button
-                    android:id="@+id/simpan_data_spp"
+                    android:id="@+id/simpan_data_siswa"
                     android:text="SIMPAN"
                     android:layout_marginTop="@dimen/_40sdp"
                     android:layout_marginBottom="@dimen/_20sdp"

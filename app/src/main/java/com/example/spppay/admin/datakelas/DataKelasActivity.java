@@ -25,7 +25,7 @@ import java.util.Arrays;
 public class DataKelasActivity extends AppCompatActivity {
 
     private AppDatabase db;
-    private RecyclerView rv;
+    private RecyclerView rvKelas;
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager layoutManager;
     private ArrayList<Kelas> daftarKelas;
@@ -44,17 +44,17 @@ public class DataKelasActivity extends AppCompatActivity {
         db = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, "kelasdb").allowMainThreadQueries().build();
 
         //initialize recyclerview dan layoutManager
-        rv = findViewById(R.id.rv__kelas);
-        rv.setHasFixedSize(true);
+        rvKelas = findViewById(R.id.rv_kelas);
+        rvKelas.setHasFixedSize(true);
         layoutManager = new GridLayoutManager(this, 2);
-        rv.setLayoutManager(layoutManager);
+        rvKelas.setLayoutManager(layoutManager);
 
         //add data ke array list
         daftarKelas.addAll(Arrays.asList(db.kelasDAO().selectAllKelas()));
 
         //set semua data ke adapter dan di tampilkan
         adapter = new AdapterKelasRecyclerView(daftarKelas, this);
-        rv.setAdapter(adapter);
+        rvKelas.setAdapter(adapter);
 
         //pindah ke halaman formDataKelas
         FABAddKelas.setOnClickListener(new View.OnClickListener() {
@@ -65,5 +65,4 @@ public class DataKelasActivity extends AppCompatActivity {
             }
         });
     }
-
 }

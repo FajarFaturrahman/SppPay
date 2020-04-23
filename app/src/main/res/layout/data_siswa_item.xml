@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvDataSiswa"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_170sdp"
+    app:cardCornerRadius="@dimen/_10sdp"
+    app:cardElevation="@dimen/_8sdp"
+    android:layout_marginStart="@dimen/_7sdp"
+    android:layout_marginEnd="@dimen/_7sdp"
+    android:layout_marginBottom="@dimen/_7sdp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/_3sdp">
+
+        <TextView
+            android:id="@+id/tv_nama_siswa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fajar Faturrahman"
+            android:textSize="@dimen/_17sdp"
+            android:textColor="@android:color/black"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:singleLine="true"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:id="@+id/tv_nis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1718117117"
+            android:textSize="@dimen/_16sdp"
+            android:textColor="@android:color/black"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_below="@id/tv_nama_siswa"
+            android:layout_marginTop="@dimen/_10sdp" />
+
+        <TextView
+            android:id="@+id/tv_kelas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="XII RPL 1"
+            android:textSize="@dimen/_16sdp"
+            android:textColor="@android:color/black"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_below="@id/tv_nis"
+            android:layout_marginTop="@dimen/_10sdp" />
+
+        <LinearLayout
+            android:id="@+id/layout_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_below="@id/tv_kelas">
+
+            <ImageButton
+                android:id="@+id/btn_delete"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:background="@android:color/white"
+                android:src="@drawable/ic_delete2"
+                android:layout_weight="1"/>
+
+            <ImageButton
+                android:id="@+id/btn_edit"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:background="@android:color/white"
+                android:src="@drawable/ic_edit"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tap For Detail"
+            android:textSize="@dimen/_10sdp"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>

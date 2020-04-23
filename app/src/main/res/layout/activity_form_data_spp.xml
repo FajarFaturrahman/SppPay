@@ -93,7 +93,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_30sdp"
                 android:padding="@dimen/_2sdp"
-                android:inputType="text"
+                android:inputType="numberDecimal"
                 android:textSize="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_3sdp"
                 android:layout_marginStart="@dimen/_20sdp"

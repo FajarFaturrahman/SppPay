@@ -10,6 +10,7 @@ import java.io.Serializable;
 public class Kelas implements Serializable {
 
     @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "id_kelas")
     public int id_kelas;
 
     @ColumnInfo(name = "nama_kelas")

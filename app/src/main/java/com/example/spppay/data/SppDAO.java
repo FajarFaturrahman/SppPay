@@ -8,21 +8,20 @@ import androidx.room.Query;
 import androidx.room.Update;
 
 import com.example.spppay.model.Kelas;
-
-import java.util.List;
+import com.example.spppay.model.Spp;
 
 @Dao
-public interface KelasDAO {
+public interface SppDAO {
 
-    @Query("SELECT * FROM kelas")
-    Kelas[] selectAllKelas();
+    @Query("SELECT * FROM spp")
+    Spp[] selectAllSpp();
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    Long insertKelas(Kelas kelas);
+    Long insertSpp(Spp spp);
 
     @Update
-    int updateKelas(Kelas kelas);
+    int updateSpp(Spp spp);
 
     @Delete
-    public void deleteKelas(Kelas kelas);
+    void deleteSpp(Spp spp);
 }

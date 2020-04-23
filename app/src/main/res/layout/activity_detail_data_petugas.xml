@@ -20,7 +20,7 @@
         android:layout_marginTop="@dimen/_30sdp"/>
 
     <TextView
-        android:id="@+id/nama_admin_profile"
+        android:id="@+id/nama_data_petugas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Ujang Hayu"
@@ -78,7 +78,7 @@
                 android:layout_marginTop="@dimen/_14sdp"/>
 
             <TextView
-                android:id="@+id/id_petugas_profile"
+                android:id="@+id/id_data_petugas"
                 android:layout_width="@dimen/_130sdp"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/view_detail"
@@ -101,7 +101,7 @@
                 android:layout_marginTop="@dimen/_14sdp"/>
 
             <TextView
-                android:id="@+id/username_profile"
+                android:id="@+id/username_data_petugas"
                 android:layout_width="@dimen/_130sdp"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/ket_id_petugas"
@@ -124,12 +124,12 @@
                 android:layout_marginTop="@dimen/_14sdp"/>
 
             <TextView
-                android:id="@+id/telp_profile"
+                android:id="@+id/level_data_petugas"
                 android:layout_width="@dimen/_130sdp"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/ket_username_profile"
                 android:layout_toRightOf="@id/ket_level_profile"
-                android:text="08888023333333"
+                android:text="admin"
                 android:textColor="@color/TextDetailColor"
                 android:layout_marginStart="@dimen/_20sdp"
                 android:textSize="@dimen/_14sdp"

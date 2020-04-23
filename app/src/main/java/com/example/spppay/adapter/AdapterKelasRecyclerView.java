@@ -1,5 +1,6 @@
 package com.example.spppay.adapter;
 
+import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.room.Room;
 
 import com.example.spppay.R;
+import com.example.spppay.admin.datakelas.FormDataKelasActivity;
+import com.example.spppay.admin.datakelas.DataKelasActivity;
 import com.example.spppay.data.factory.AppDatabase;
 import com.example.spppay.model.Kelas;
 
@@ -51,6 +54,31 @@ public class AdapterKelasRecyclerView extends RecyclerView.Adapter<AdapterKelasR
 
         holder.tvNamaKelas.setText(namaKelas);
         holder.tvKompetensi.setText(kompetensi);
+
+        holder.btnDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onDeleteKelas(position);
+            }
+        });
+
+        holder.btnEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onUpdateKelas(position);
+            }
+        });
+    }
+
+    private void onDeleteKelas(int position){
+        db.kelasDAO().deleteKelas(daftarKelas.get(position));
+        daftarKelas.remove(position);
+        notifyItemRemoved(position);
+        notifyItemRangeRemoved(position, daftarKelas.size());
+    }
+
+    private void onUpdateKelas(int position){
+        context.startActivity(FormDataKelasActivity.getActIntent((Activity) context).putExtra("data", daftarKelas.get(position)));
     }
 
     @Override
@@ -74,4 +102,5 @@ public class AdapterKelasRecyclerView extends RecyclerView.Adapter<AdapterKelasR
             cvKelas         = itemView.findViewById(R.id.cvDataKelas);
         }
     }
+
 }

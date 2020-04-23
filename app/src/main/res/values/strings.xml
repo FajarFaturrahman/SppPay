@@ -20,4 +20,9 @@
     <string name="data_kelas">Data Kelas</string>
     <string name="data_spp">Data SPP</string>
     <string name="kelola_data">KELOLA DATA</string>
+    
+    <string-array name="role_petugas">
+        <item>petugas</item>
+        <item>admin</item>
+    </string-array>
 </resources>
