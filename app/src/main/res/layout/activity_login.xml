@@ -88,24 +88,16 @@
             <EditText
                 android:id="@+id/password"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_30sdp"
-                android:padding="@dimen/_20sdp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
                 android:inputType="textPassword"
+                android:textSize="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_3sdp"
                 android:layout_marginStart="@dimen/_20sdp"
                 android:layout_marginEnd="@dimen/_20sdp"
                 android:backgroundTint="@color/background_edittext"/>
 
-            <TextView
-                android:id="@+id/btn_role"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Masuk Sebagai Admin/Petugas"
-                android:textColor="@color/FontColor2"
-                android:fontFamily="@font/roboto_regular"
-                android:layout_marginTop="@dimen/_13sdp"
-                android:layout_marginEnd="@dimen/_22sdp"
-                android:layout_gravity="end"/>
+
 
             <Button
                 android:id="@+id/Login"

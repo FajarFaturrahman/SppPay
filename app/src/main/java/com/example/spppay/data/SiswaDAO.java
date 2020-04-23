@@ -18,6 +18,9 @@ public interface SiswaDAO {
     @Query("SELECT * FROM siswa")
     Siswa[] selectAllSiswa();
 
+    @Query("SELECT * FROM siswa where nis = :nis and nis = :password")
+    Siswa siswaLogin(String nis, String password);
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insertSiswa(Siswa siswa);
 
@@ -29,5 +32,8 @@ public interface SiswaDAO {
 
     @Query("SELECT * FROM siswa WHERE nisn = :nisn LIMIT 1")
     Siswa selectSiswaDetail(int nisn);
+
+    @Query("SELECT * FROM siswa WHERE nisn = :nisn LIMIT 1")
+    Siswa siswaProfile(int nisn);
 
 }

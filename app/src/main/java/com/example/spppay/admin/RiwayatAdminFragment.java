@@ -30,9 +30,7 @@ public class RiwayatAdminFragment extends Fragment {
     private AppDatabase db;
     private RecyclerView rvAdmin;
     private RecyclerView.Adapter adapter;
-    private RecyclerView.LayoutManager layoutManager;
     private ArrayList<Pembayaran> daftarRiwayat;
-    private Context context;
 
 
     @Override
@@ -47,9 +45,11 @@ public class RiwayatAdminFragment extends Fragment {
          db = Room.databaseBuilder(getActivity().getApplicationContext(), AppDatabase.class, "pembayarandb").allowMainThreadQueries().build();
 
         //initialize recyclerview dan layoutManager
+
         rvAdmin = view.findViewById(R.id.rv_riwayat_admin);
         rvAdmin.setHasFixedSize(true);
-        layoutManager = new LinearLayoutManager(getActivity());
+        final LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
+        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         rvAdmin.setLayoutManager(layoutManager);
 
         //add data ke array list

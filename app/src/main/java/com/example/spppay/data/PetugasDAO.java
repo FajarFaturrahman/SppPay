@@ -15,6 +15,12 @@ public interface PetugasDAO {
     @Query("SELECT * FROM petugas")
     Petugas[] selectAllPetugas();
 
+    @Query("SELECT * FROM petugas where username = :username and password = :password")
+    Petugas petugaslogin(String username, String password);
+
+    @Query("SELECT level FROM petugas where username = :username")
+    String petugasLoginLevel(String username);
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     Long insertPetugas(Petugas petugas);
 
@@ -26,4 +32,7 @@ public interface PetugasDAO {
 
     @Query("SELECT * FROM petugas WHERE id_petugas = :id LIMIT 1")
     Petugas selectPetugasDetail(int id);
+
+    @Query("SELECT * FROM petugas WHERE id_petugas = :id_petugas LIMIT 1")
+    Petugas petugasProfile(int id_petugas);
 }

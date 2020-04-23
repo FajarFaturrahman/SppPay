@@ -26,16 +26,18 @@
         <activity
             android:name=".admin.MainActivityAdmin"
             android:label="@string/title_activity_main_admin">
+
+        </activity>
+        <activity
+            android:name=".siswa.MainActivitySiswa"
+            android:label="@string/title_activity_main_siswa" />
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".siswa.MainActivitySiswa"
-            android:label="@string/title_activity_main_siswa" />
-        <activity android:name=".LoginActivity" />
     </application>
 
 </manifest>
